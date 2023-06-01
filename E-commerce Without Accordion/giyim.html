@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/4d8a91066f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>GİYİM</title>
+</head>
+
+<body>
+  <!-- Nav upper -->
+  <div
+    class="d-flex justify-content-center align-items-center container-fluid upper-nav bg-dark text-center mb-0 p-1 d-none d-sm-block text-light">
+    <p class="fw-light m-0 font-monospace">5000TL ve üzeri Tüm Alışverinizde kargo <span class="fw-bold">ücretsiz</span>
+    </p>
+  </div>
+  <!-- NAV UPPER END -->
+
+  <!-- NAV-->
+  <nav class="navbar navbar-satis bg-light ">
+    <div class=" container-fluid row my-auto d-flex justify-content-center ">
+      <div class="col-4 d-flex justify-content-start">
+        <button class="btn  burger-button  fs-1" type="button" aria-controls="offcanvasWithBothOptions"><i
+            class="bi bi-list"></i></button>
+      </div>
+
+      <div class="col-4 d-flex justify-content-center">
+        <a href="index.html"><img id="nav-icon" class="" src="img/ticaret-removebg-preview.png" alt=""></a>
+      </div>
+
+      <div class="col-4 d-flex justify-content-end ">
+        <form class="w-50 me-3" role="search">
+          <div class="input-group d-none d-lg-flex">
+            <input class="form-control border-0 shadow-sm " type="search" placeholder="Ara">
+            <button class="btn bg-white  rounded-start-0 shadow-sm rounded  align-self-center p-3 me-3" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+        <button type="button" class="btn btn-outline-dark rounded  me-md-3  fs-4" data-bs-toggle="modal"
+          data-bs-target="#loginModal">
+          <i class="bi bi-door-open"></i>
+        </button>
+        <button class="btn btn-outline-dark rounded fs-4 d-none d-md-block sepet-ekle"><i
+            class="bi bi-bag"></i></button>
+
+      </div>
+    </div>
+    <!-- SEPET -->
+    <div class="sepet bg-body-tertiary bg-gradient ">
+      <div class="container">
+        <div class="urun-bilgi d-flex justify-content-between align-items-center">
+          <p>Ürün Adı</p>
+          <p>Fiyat</p>
+        </div>
+        <div class="urunler ms-4">
+
+        </div>
+        <div class="tutar d-flex align-items-center justify-content-between">
+          <div>Toplam Tutar:</div>
+          <button class="btn btn-outline-dark">Ödemeye Geç</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- NAV END -->
+  <!-- OPTIONS -->
+  <div class="container">
+    <div class="row">
+      <h1 class="text-uppercase text-center fw-lighter mt-5">TÜM GİYİM</h1>
+      <div class="options d-flex justify-content-end  gap-2">
+        <div class="view-style ">
+          <div class="order-by dropdown">
+            <button class="dropdown-toggle btn btn-outline-dark" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Sırala</button>
+            <div class="dropdown-menu">
+              <ul>
+                <li data-value="0">En Yeniler</li>
+                <li data-value="0">İndirimdekiler</li>
+
+                <li data-value="0">Artan Fiyat</li>
+                <li data-value="0">Azalan Fiyat</li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="filter-button d-flex justify-content-end"><button class="btn btn-outline-dark">Filtrele</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- OPTIONS END  -->
+
+  <!-- OFFCANVAS -->
+  <aside class="sidebar p-4">
+    <div class="sidebar-header d-flex justify-content-between m-auto">
+      <h3 class="my-4">Kategoriler</h3>
+      <button class="btn close-btn fs-4">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- OFFCANVAS -> Accordion -->
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button fs-3 text-dark fst-italic" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Giyim
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item border-0">
+                <a href="giyim.html" class="nav-link fst-italic">Tüm Giyim✨</a>
+              </li>
+              <hr />
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Tişört</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Takım(Alt/Üst)</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Pantolon</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Şort</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Gömlek</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Eşofman</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Sweatshirt/Hoodie</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Ceket/Mont</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link position-relative">Basics
+                  <span class="fw-light position-absolute top-0 badge rounded-pill text-primary">
+                    Yeni
+                  </span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button fs-3 text-dark fst-italic" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Aksesuar
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link fst-italic">Tüm Aksesuarlar✨</a>
+              </li>
+              <hr />
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Şapka</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Çorap</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Gözlük</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Maske</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Bandana</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Havlu</a>
+              </li>
+              <hr />
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Bere</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Atkı</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Eldiven</a>
+              </li>
+              <hr />
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Kemer</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Zincir</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button fs-3 text-dark fst-italic" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+            Takı
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="giyim.htmgiyim.html" class="nav-link fst-italic">Tüm Takılar✨</a>
+              </li>
+              <hr />
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Iced Out New</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Kolye</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Bileklik</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Yüzük</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Küpe</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Piercing</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Saat</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button fs-3 text-dark fst-italic" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+            Çanta/Cüzdan
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="#" class="nav-link fst-italic">Tüm Çantalar✨</a>
+              </li>
+              <hr />
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Bel Çantası</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Omuz Çantası</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Cüzdan</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Sırt Çantası</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Bez Çantası</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Spor Çantası</a>
+              </li>
+              <li class="nav-item">
+                <a href="giyim.html" class="nav-link">Valiz ve Seyahat Çantası</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="nav flex-column mt-2 offcanvas2">
+      <li class="nav-item">
+        <a href="#" class="nav-link fs-2 text-dark position-relative">Kombin
+          <span class="fs-6 position-absolute top-0 badge rounded-pill text-danger">
+            Yeni
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link fs-2 text-dark position-relative">Redkeys Music
+          <span class="fs-6 position-absolute top-0 badge rounded-pill text-primary">
+            Merch
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link fs-2 text-dark">Outlet Url23</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link fs-2 text-dark">Outlet Ucs23</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- OFFCANVAS END  -->
+  <!-- Sign In Modal-->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down  ">
+      <div class="modal-content ">
+
+        <div class="modal-header  border-0 ">
+          <div class="form-title  mt-0">
+            <h4 class="m-auto">Giriş Yap</h4>
+          </div>
+          <button type="button" class="close bg-white border-0 fs-3 me-0" data-bs-dismiss="modal" aria-label="Close">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+
+          <div class="d-flex flex-column text-center">
+            <form class="form w-50 m-auto">
+              <div class="form-group ">
+                <label for="email1" class="float-start form-label">Mail</label>
+                <input type="email" class="form-control mb-3" id="email1" placeholder="Mail adresinizi girin">
+              </div>
+              <div class="form-group">
+                <label for="password1" class="float-start form-label">Şifre</label>
+                <input type="password" class="form-control" id="password1" placeholder="Şifrenizi girin">
+                <a href="#" class="text-info text-decoration-none fw-light">Şifremi Unuttum</a>
+              </div>
+              <button type="button" class="btn btn-outline-dark btn-block btn-round mt-5 mb-2 p-3">Giriş Yap</button>
+
+
+            </form>
+
+            <div class="text-center text-muted ">veya</div>
+
+            <!-- Modal İçerisindeki Sosyal Medya Linkleri -->
+            <div class="d-flex justify-content-center mt-md-3 mt-5 gap-2">
+
+              <button type="button" class="btn btn-secondary btn-round border-0 fs-3" id="btn-modal-twitter"
+                data-bs-toggle="tooltip" data-placement="top" title="Twitter">
+                <span class="bi bi-twitter"></span>
+              </button>
+
+              <button type="button" class="btn btn-secondary btn border-0 fs-3" id="btn-modal-facebook"
+                data-bs-toggle="tooltip" data-placement="top" title="Facebook">
+                <span class="bi bi-facebook"></span>
+              </button>
+
+              <button type="button" class="btn btn-round border-0 fs-3" id="btn-modal-linkledin"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin">
+                <span class="bi bi-linkedin"></span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <div class="signup-section">Üye Değil misiniz? <a href="#" class="text-info text-decoration-none"
+              data-bs-toggle="modal" data-bs-target="#modal2">Hemen Üye
+              Ol</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Sign In Modal Kısmı END-->
+
+  <!-- Sign Up Modal Kısmı -->
+  <div class="modal fade" id="modal2" tabindex="2" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down  ">
+      <div class="modal-content ">
+
+        <div class="modal-header  border-0 ">
+          <div class="form-title  mt-0">
+            <h4 class="m-auto">Kayıt Ol</h4>
+          </div>
+          <button type="button" class="close bg-white border-0 fs-3 me-0" data-bs-dismiss="modal" aria-label="Close">
+            <span>×</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+
+          <div class="d-flex flex-column text-center">
+            <form class="form w-50 m-auto">
+              <div class="form-group ">
+                <label for="email2" class="float-start form-label">Mail</label>
+                <input type="email" class="form-control mb-3" id="email2" placeholder="Mail adresinizi girin">
+              </div>
+              <div class="form-group">
+                <label for="password2" class="float-start form-label">Şifre</label>
+                <input type="password" class="form-control mb-3" id="password" placeholder="Şifrenizi girin">
+                <label for="passwordre" class="float-start form-label">Şifrenizi Tekrar Girin</label>
+                <input type="password" class="form-control" id="passwordre" placeholder="Şifrenizi girin">
+
+              </div>
+              <button type="button" class="btn btn-outline-dark btn-block btn-round mt-5 mb-2 p-3">Kayıt Ol</button>
+
+
+            </form>
+
+            <div class="text-center text-muted ">veya</div>
+
+            <!-- Modal İçerisindeki Sosyal Medya Linkleri -->
+            <div class="d-flex justify-content-center mt-md-3 mt-5 gap-2 mb-md-3">
+
+              <button type="button" class="btn btn-secondary btn-round border-0 fs-3" id="btn-modal-twitter"
+                data-bs-toggle="tooltip" data-placement="top" title="Twitter">
+                <span class="bi bi-twitter"></span>
+              </button>
+
+              <button type="button" class="btn btn-secondary btn border-0 fs-3" id="btn-modal-facebook"
+                data-bs-toggle="tooltip" data-placement="top" title="Facebook">
+                <span class="bi bi-facebook"></span>
+              </button>
+
+              <button type="button" class="btn btn-round border-0 fs-3" id="btn-modal-linkledin"
+                data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin">
+                <span class="bi bi-linkedin"></span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal Kısmı END -->
+
+  <!-- CARDS -->
+
+  <div class="container my-5">
+    <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+      <div class="col mt-4">
+
+
+
+
+
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/80985-brutal-oversize-erkek-tisort-uk1228bysy-uk1228bysy-uk1228bysy-01.jpg"
+              class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center ">
+            <h5 class="card-title fs-5 align-self-center">Tshirt</h5>
+            <p class="fs-5 mt-1"><span>59.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/1.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Tshirt</h5>
+           <p class="fs-5 mt-1"><span>49.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/2.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Tshirt</h5>
+           <p class="fs-5 mt-1"><span>69.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/3.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Tshirt</h5>
+           <p class="fs-5 mt-1"><span>49.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/4.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Tshirt</h5>
+           <p class="fs-5 mt-1"><span>109.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/pant1.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Pantolon</h5>
+           <p class="fs-5 mt-1"><span>55.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/pant2.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Pantolon</h5>
+           <p class="fs-5 mt-1"><span>87.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/pant3.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Pantolon</h5>
+           <p class="fs-5 mt-1"><span>103.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/pant4.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Pantolon</h5>
+           <p class="fs-5 mt-1"><span>110.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/pant5.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Pantolon</h5>
+           <p class="fs-5 mt-1"><span>119.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/sort1.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Şort</h5>
+           <p class="fs-5 mt-1"><span>59.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/sort2.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Şort</h5>
+           <p class="fs-5 mt-1"><span>25.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/sort3.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Şort</h5>
+           <p class="fs-5 mt-1"><span>76.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/sort4.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Şort</h5>
+           <p class="fs-5 mt-1"><span>95.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col mt-4">
+        <div class="card">
+          <div class="urun-image overflow-hidden">
+            <img src="img/urun-card/sort5.jpeg" class="card-img-2 img-fluid " alt="">
+          </div>
+          <div class="card-body d-flex justify-content-between align-item-center">
+           <h5 class="card-title fs-5 align-self-center">Şort</h5>
+           <p class="fs-5 mt-1"><span>99.99</span>TL</p>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn ekle w-100"><span>Sepete Ekle</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CARDS END -->
+
+  <!-- BULTEN -->
+  <div class="container-fluid bg-secondary-subtle">
+    <div class="row d-flex justify-content-center text-center p-5">
+      <div class="col-12 col-sm-6 col-md-3">
+        <h4>KAMPANYA VE YENİLİKLERDEN HABERDAR OLUN</h4>
+        <p>BÜLTENİMİZE ABONE OL</p>
+        <div class="d-flex flex-column text-center">
+          <form class="form  m-auto">
+            <div class="form-group w-auto">
+              <input type="email" class="form-control mb-3 bg-transparent border-1 border-black shadow-none" id="email1"
+                placeholder="E-posta Adresiniz">
+              <div class="form-check form-switch">
+                <input class="form-check-input out" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault"> Gizlilik politikasını okudum ve
+                  elektronik
+                  posta almayı kabul ediyorum.</label>
+              </div>
+              <a type="button" class="btn btn-dark mt-3">ABONE OL</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="text-center text-lg-start bg-white text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-md-block">
+        <span class="fs-5 fw-bold">BİZİ TAKİP EDİN:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div class="d-flex sosyal-logolar">
+        <a href="" class="me-4 fs-3 nav-link link-secondary">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="" class="me-4 fs-3 nav-link link-secondary">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 fs-3 nav-link link-secondary">
+          <i class="fa-brands fa-google"></i>
+        </a>
+        <a href="" class="me-4 fs-3 nav-link link-secondary">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 fs-3 nav-link link-secondary">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+    <!-- FOOTER D-MD-NONE ACCORDİON -->
+    <div class="accordion accordion-flush d-md-none" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            YARDIM DESTEK
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Üyelik</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Sipariş</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Ödeme</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Kargo
+                  ve
+                  Teslimat</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">İade ve
+                  Değişim</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Sık
+                  Sorulan
+                  Sorualr</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">İşlem
+                  Rehberi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            KURUMSAL
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li class="list-group-item border-0"><a href="#"
+                  class="text-decoration-none text-secondary">Hakkımızda</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Toptan
+                  Satış</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">İletişim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            POPÜLER SAYFALAR
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="list-group">
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">XMAG</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Okula
+                  Dönüş</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Black
+                  Friday</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Yılbaşı
+                  Hediyeleri</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Sevgililer
+                  Günü</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Kombinler</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Festival
+                  Kıyafetleri</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Takım
+                  (Alt/Üst)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Links  -->
+    <section class="footer-links">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 d-none d-md-block">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              YARDIM DESTEK
+            </h6>
+            <ul class="list-group">
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Üyelik</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Sipariş</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Ödeme</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Kargo
+                  ve
+                  Teslimat</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">İade ve
+                  Değişim</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Sık
+                  Sorulan
+                  Sorualr</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">İşlem
+                  Rehberi</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 d-none d-md-block">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              KURUMSAL
+            </h6>
+            <ul class="list-group">
+              <li class="list-group-item border-0"><a href="#"
+                  class="text-decoration-none text-secondary">Hakkımızda</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Toptan
+                  Satış</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">İletişim</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 d-none d-md-block">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Popüler Sayfalar
+            </h6>
+            <ul class="list-group">
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">XMAG</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Okula
+                  Dönüş</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Black
+                  Friday</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Yılbaşı
+                  Hediyeleri</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Sevgililer
+                  Günü</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Kombinler</a>
+              </li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Festival
+                  Kıyafetleri</a></li>
+              <li class="list-group-item border-0"><a href="#" class="text-decoration-none text-secondary">Takım
+                  (Alt/Üst)</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4 d-none d-md-flex">Uygulamamızı İndİrİn</h6>
+            <div class="row  justify-content-center gap-0 d-none d-md-flex">
+              <ul class="list-group d-flex">
+                <li class="d-inline"><img src="img/appstore.png" alt="" class="img-fluid"
+                    style="height: 96px; width: 96px;"></li>
+                <li class="d-inline"> <img src="img/pngwing.com.png" alt="" class="img-fluid" style="height: 110px;">
+                </li>
+
+
+              </ul>
+            </div>
+            <h6 class="text-uppercase fw-bold mb-4">Bize Ulaşın</h6>
+            <ul class="list-group">
+              <li class="list-group-item border-0 text-secondary"><i class="fas fa-home me-3 text-secondary"></i>
+                <a href="https://www.google.com/maps/d/u/0/embed?mid=10bGO5DbVpHzSU6nZ8GiLH83PsvA&msa=0&ie=UTF8&t=h&ll=38.45273200000001%2C27.102777999999994&spn=0.003865%2C0.018389&z=16&output=embed"
+                  target="_blank" class=" text-secondary text-decoration-none">Karşıyaka,
+                  İzmir</a>
+              </li>
+              <li class="list-group-item border-0 text-secondary">
+                <i class="fas fa-envelope me-3 "></i>
+                <a href="mailto:ucsclothing@gmail.com"
+                  class="text-secondary text-decoration-none">ucsclothing@gmail.com</a>
+              </li>
+              <li class="list-group-item border-0 text-secondary"><i class="fas fa-phone me-3 text-secondary"></i>
+                <a href="tel:+90
+              542 470 1022" class="text-secondary text-decoration-none">+90
+                  542 470 1022</a>
+              </li>
+              <li class="list-group-item border-0 text-secondary"><i class="fas fa-phone me-3 text-secondary"></i>
+                <a href="tel:+0232
+              234 567 89" class="text-secondary text-decoration-none">+0232
+                  234 567 89</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://github.com/UralcanSekerci">Uralcan Sekerci</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <!-- Scroll Btton -->
+  <button class="btn fs-4 border-0 scroll-to-top-btn"><i class="bi bi-arrow-90deg-up"></i></button>
+
+<div class="overlay"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>

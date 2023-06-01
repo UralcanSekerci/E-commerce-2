@@ -1,0 +1,297 @@
+/* * {
+  font-family: monospace;
+} */
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden !important;
+}
+/* NAVBAR */
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-index {
+  background-color: transparent !important;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+
+.navbar-satis {
+  width: 100%;
+  position: relative;
+}
+/* NAV ICON */
+#nav-icon {
+  height: 100px !important;
+  width: 100px !important;
+}
+
+/* OFFCANVAS -> ACCORDION */
+
+.accordion-body ul li a {
+  color: black !important;
+}
+
+.accordion-button {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* CARDS */
+.card-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+  transition: 0.3s ease;
+}
+.card {
+  overflow: hidden;
+}
+.card:not(.minitotal .card):hover .card-img {
+  filter: brightness(0.5);
+  transform: scale(1.1);
+}
+/* CARDS GİYİM PAGE */
+
+.card-img-2 {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1);
+  transition: 0.5s ease;
+}
+
+.card-img-2:hover {
+  filter: brightness(0.9);
+  transform: scale(1.3);
+}
+
+/* Offcanvas  */
+
+.sidebar li a {
+  transition: 0.3s;
+  font-family: monospace;
+  font-weight: lighter;
+}
+.sidebar li a:hover {
+  transform: scale(1.05);
+  transform: translate(5%, 5%);
+}
+/* MODAL BUTTONS */
+#btn-modal-facebook {
+  background-color: #3b5998;
+}
+#btn-modal-linkledin {
+  background-color: #0072b1;
+}
+#btn-modal-twitter {
+  background-color: #1da1f2;
+}
+
+/* CAROUSELS */
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* MINI CAROUSEL RESPONSIVE */
+
+@media (max-width: 767px) {
+  .carousel-mini-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-mini-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+.carousel-mini-inner .carousel-item.active,
+.carousel-mini-inner .carousel-item-next,
+.carousel-mini-inner .carousel-item-prev {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .carousel-mini-inner .carousel-item-end.active,
+  .carousel-mini-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  .carousel-mini-inner .carousel-item-start.active,
+  .carousel-mini-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+.carousel-mini-inner .carousel-item-end,
+.carousel-mini-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+/* Burger Button Animation */
+.burger-button:hover {
+  animation-name: hop;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+/* DEPREM CARDS */
+
+.deprem img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Footer */
+
+footer section .sosyal-logolar a i {
+  transition: 0.3s ease-in-out;
+}
+
+footer section .sosyal-logolar a i:hover {
+  color: black !important;
+  transform: scale(1.5) !important;
+}
+footer .footer-links a {
+  transition: 0.3s ease-in-out;
+}
+
+footer .footer-links a:hover {
+  color: black !important;
+  transform: scale(1.2) !important;
+}
+
+/* Scroll Button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 3px;
+
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.scroll-to-top-btn.show {
+  opacity: 1;
+}
+
+/* SEPET */
+
+.sepet {
+  border-radius: 10px 0 0 10px;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(110%);
+  z-index: 2;
+  width: 50%;
+}
+
+.sepet.visible {
+  transform: translate(0);
+}
+
+.urunler {
+  height: 200px;
+  overflow-x: scroll;
+}
+
+.urun-resim {
+  height: 100px;
+}
+.urun-resim img {
+  height: 100%;
+}
+
+/* SEARCH BUTTON ANIMATION */
+.input-group input[type="search"]:focus + button i {
+  animation-name: turn;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.sidebar {
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 40%;
+  height: 100%;
+  background-color: transparent;
+  row-gap: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease-in-out, background-color 1s ease-in-out;
+  transform: translate(-130%);
+  opacity: 0.95;
+}
+.show-sidebar {
+  transform: translate(0);
+  background-color: #fff;
+}
+@media screen and (max-width: 676px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* NAVBAR RESPONSIVE */
+
+@media (max-width: 767px) {
+  .navbar {
+    height: 100px;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    opacity: 0.92;
+  }
+
+  .navbar .container-fluid {
+    padding: 0;
+  }
+
+  .navbar .container-fluid .row {
+    align-items: center;
+
+    padding: 5px;
+  }
+
+  .navbar .col-4 {
+    width: auto;
+    padding: 0;
+  }
+
+  .navbar .col-4 .burger-button {
+    font-size: 1.5rem;
+  }
+
+  .navbar .col-4 img {
+    height: 10px;
+  }
+
+  .navbar .col-4 form {
+    width: 60%;
+  }
+
+  .navbar .col-4 .sepet-ekle {
+    font-size: 1.5rem;
+  }
+}
